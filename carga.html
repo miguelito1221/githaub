@@ -1,0 +1,64 @@
+<html>
+    <body>
+        <div class="main-outer">
+            <div class="carga"></div>
+            <style>
+                body {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100vh;
+                    background: #0b0c0d; 
+                }
+                .carga {
+                    width: 150px;
+                    height: 80px;
+                    border: 3px solid whitesmoke;
+                    border-radius: 12px;
+                    position: relative;
+                }
+                .carga::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -10px;
+                    transform: translate(10px, -50%);
+                    width: 10px;
+                    height: 25px;
+                    background-color: transparent;
+                    border: 3px solid whitesmoke;
+                }
+                .carga:after {
+                    content: "";
+                    position: absolute;
+                    background: #f1efef;
+                    border-radius: 7px;
+                    animation: animate 5s linear infinite;
+                }
+                @keyframes animate {
+                0%{
+                    width: 0%;
+                    background: red;
+                }
+                25%{
+                    width: 25%;
+                    background: orange;
+                }
+                50%{
+                    width: 50%;
+                    background: yellow;
+                }
+                75%{
+                    width: 75%;
+                    background: #d7fc03;
+                }
+                100%{
+                    width: 100%;
+                    background: green;
+                }
+                }
+            </style>
+            </style>
+        </div>
+    </body>
+</html>
